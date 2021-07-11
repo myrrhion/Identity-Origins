@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "myrrhion.identityorigins.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "FlowerMixin",
+    "ItemBlockMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,32 @@
+{
+"type":"origins:multiple",
+"jump":{
+  "type": "origins:modify_jump",
+  "modifier": {
+    "name": "Natural bounceness",
+    "value": 0.25,
+    "operation": "multiply_base"
+  }
+},
+  "run": {
+    "type": "origins:attribute",
+    "modifier": {
+      "name": "Bouns Speed",
+      "attribute": "minecraft:generic.movement_speed",
+      "value": 0.01,
+      "operation": "addition"
+    }
+  },
+  "land": {
+    "type": "origins:modify_damage_taken",
+    "modifier": {
+      "name": "Less fall damage taken",
+      "value": -0.5,
+      "operation": "multiply_base"
+    },
+    "damage_condition": {
+          "type": "origins:name",
+          "name": "fall"
+    }
+  }
+}

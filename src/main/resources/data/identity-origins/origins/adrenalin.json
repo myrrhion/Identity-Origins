@@ -1,0 +1,8 @@
+{
+  "icon": "potion",
+  "powers": [
+    "identity-origins:adrenalin"
+  ],
+  "order": 0,
+  "impact": 0
+}

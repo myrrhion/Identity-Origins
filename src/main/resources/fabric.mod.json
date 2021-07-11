@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "identity-origins",
+  "version": "0.1.0",
+  "name": "Identity Origins",
+  "description": "Mod that includes more Origins and integrates the identity mod for shapeshifting",
+  "authors": [
+    "Myrrhion"
+  ],
+  "contact": {
+    "repo": ""
+  },
+  "license": "MIT",
+  "icon": "assets/identity-origins/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "myrrhion.identityorigins.IdentityOriginsClient"
+    ],
+    "main": [
+      "myrrhion.identityorigins.IdentityOrigins"
+    ]
+  },
+  "mixins": [
+    "Identity-Origins.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.2",
+    "fabric": "*",
+    "minecraft": ">=1.16.5",
+    "origins": ">=0.4.1",
+    "identity": "*"
+  }
+}

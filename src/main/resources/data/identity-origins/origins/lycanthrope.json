@@ -1,0 +1,10 @@
+{
+  "powers": [
+    "origins:carnivore",
+    "identity-origins:wolf_form",
+    "identity-origins:wolf_descriptor"
+  ],
+  "icon": "mutton",
+  "order": 0,
+  "impact": 3
+}

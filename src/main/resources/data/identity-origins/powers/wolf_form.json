@@ -1,0 +1,12 @@
+{
+  "type": "identity-origins:transform",
+  "cooldown": 30,
+  "hud_render": {
+    "bar_index": 6
+  },
+  "entity_type": "minecraft:wolf",
+  "key": {
+    "key": "key.origins.primary_active",
+    "continuous": false
+  }
+}

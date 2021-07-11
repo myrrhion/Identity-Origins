@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:mushroom_stew",
+    "minecraft:carrot",
+    "minecraft:apple",
+    "minecraft:chorus_fruit",
+    "minecraft:melon_slice",
+    "minecraft:dried_kelp"
+  ]
+}

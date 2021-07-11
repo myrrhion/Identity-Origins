@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "origins": [
+    "identity-origins:lycanthrope",
+    "identity-origins:leporid",
+    "identity-origins:ironforged"
+  ]
+}

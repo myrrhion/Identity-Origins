@@ -1,0 +1,8 @@
+{
+  "icon": "iron_ingot",
+  "powers": [
+    "identity-origins:ferrovore"
+  ],
+  "order": 3,
+  "impact": 3
+}

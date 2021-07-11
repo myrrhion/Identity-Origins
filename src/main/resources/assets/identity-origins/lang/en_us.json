@@ -1,0 +1,15 @@
+{
+
+  "origin.identity-origins.lycanthrope.name": "Werewolf",
+  "origin.identity-origins.lycanthrope.description": "Technically a lycanthrope, but Werewolf is the common name.",
+  "origin.identity-origins.leporid.name": "Leporid",
+  "origin.identity-origins.leporid.description": "You are a bunny person.",
+  "power.identity-origins.wolf_form.name": "Transform: Wolf",
+  "power.identity-origins.wolf_form.description": "Use the primary action key to turn into a wolf. While in wolf form, you are treated identically to a regular wolf",
+  "power.identity-origins.jumpy.name": "Agile",
+  "power.identity-origins.jumpy.description": "You jump a bit higher and run a bit faster.",
+  "power.identity-origins.wolf_descriptor.name": "Wolf's stomach",
+  "power.identity-origins.wolf_descriptor.description": "While in wolf form, you are immune to the negative effects of Puffer fish, Raw Chicken and Rotten Flesh",
+  "category.adrenaline": "Adrenalin",
+  "power.identity-origins.adrenalin.name": "Adrebakub"
+}

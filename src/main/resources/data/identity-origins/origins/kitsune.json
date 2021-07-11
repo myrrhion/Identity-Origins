@@ -1,0 +1,9 @@
+{
+  "icon": "rabbit_foot",
+  "powers": [
+    "origins:vegetarian",
+    "identity-origins:jumpy"
+  ],
+  "order": 1,
+  "impact": 2
+}
