@@ -69,6 +69,7 @@ dependencies {
     modImplementation "com.github.Draylar:identity:${project.identity_version}",{
         exclude(group:'com.github.Draylar:angerable-patch:1.0.0')
     }
+    include "com.github.Draylar:identity:${project.identity_version}"
     modImplementation "io.github.onyxstudios:Cardinal-Components-API:${project.cardinal_version}"
     include "io.github.onyxstudios:Cardinal-Components-API:${project.cardinal_version}"
     modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-entity:${project.cardinal_version}"
