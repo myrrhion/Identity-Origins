@@ -1,5 +1,6 @@
 package myrrhion.identityorigins.mixin;
 
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import io.github.apace100.origins.component.OriginComponent;
 import myrrhion.identityorigins.powers.EdiblePower;
 import net.minecraft.advancement.criterion.Criteria;
@@ -41,13 +42,13 @@ public abstract class FlowerMixin {
 
     @Inject(method = "getUseAction", at = @At("RETURN"), cancellable = true)
     public void getOmnivoreUseAction(ItemStack stack, CallbackInfoReturnable<UseAction> cir) {
-       if(OriginComponent.getPowers(owner, EdiblePower.class).stream().anyMatch(p -> p.doesApply(stack)))
+       if(PowerHolderComponent.getPowers(owner, EdiblePower.class).stream().anyMatch(p -> p.doesApply(stack)))
              cir.setReturnValue(UseAction.EAT);
     }
 
     @Inject(method = "getMaxUseTime", at = @At("RETURN"), cancellable = true)
     public void getOmnivoreUseTime(ItemStack stack, CallbackInfoReturnable<Integer> cir) {
-        if(OriginComponent.getPowers(owner, EdiblePower.class).stream().anyMatch(p -> p.doesApply(stack)))
+        if(PowerHolderComponent.getPowers(owner, EdiblePower.class).stream().anyMatch(p -> p.doesApply(stack)))
             cir.setReturnValue(48);
     }
 
@@ -55,7 +56,7 @@ public abstract class FlowerMixin {
     public void omnivoreUse(World world, PlayerEntity player, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir) {
         ItemStack stack = player.getStackInHand(hand);
 
-        if(OriginComponent.getPowers(player, EdiblePower.class).stream().anyMatch(p -> p.doesApply(stack)))
+        if(PowerHolderComponent.getPowers(player, EdiblePower.class).stream().anyMatch(p -> p.doesApply(stack)))
         {
             if (player.canConsume(false)) {
                 player.setCurrentHand(hand);
@@ -68,7 +69,7 @@ public abstract class FlowerMixin {
 
     @Inject(method = "finishUsing", at = @At("HEAD"), cancellable = true)
     public void getOmnivoreOnItemFinishedUsing(ItemStack stack, World world, LivingEntity entity, CallbackInfoReturnable<ItemStack> cir) {
-        Optional<EdiblePower> ediblePower = OriginComponent.getPowers(entity, EdiblePower.class).stream().filter(p -> p.doesApply(stack)).findFirst();
+        Optional<EdiblePower> ediblePower = PowerHolderComponent.getPowers(entity, EdiblePower.class).stream().filter(p -> p.doesApply(stack)).findFirst();
         if(ediblePower.isPresent())
         {
             if (entity instanceof PlayerEntity) {

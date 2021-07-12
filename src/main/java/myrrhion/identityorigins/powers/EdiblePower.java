@@ -1,9 +1,10 @@
 package myrrhion.identityorigins.powers;
 
 
-import io.github.apace100.origins.power.PowerType;
+import io.github.apace100.apoli.power.PowerType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import io.github.apace100.origins.power.Power;
+import io.github.apace100.apoli.power.Power;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tag.Tag;
@@ -16,7 +17,7 @@ public class EdiblePower extends Power {
     private final float saturation;
     private final int damage;
 
-    public EdiblePower(PowerType<?> type, PlayerEntity player, Predicate<ItemStack> itemTag, int hunger, float saturation,int damage) {
+    public EdiblePower(PowerType<?> type, LivingEntity player, Predicate<ItemStack> itemTag, int hunger, float saturation, int damage) {
         super(type, player);
         this.hunger = hunger;
         this.itemTag = itemTag;

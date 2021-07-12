@@ -71,8 +71,12 @@ dependencies {
     }
     modImplementation "io.github.onyxstudios:Cardinal-Components-API:${project.cardinal_version}"
     include "io.github.onyxstudios:Cardinal-Components-API:${project.cardinal_version}"
+    modImplementation "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-entity:${project.cardinal_version}"
     include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-base:${project.cardinal_version}"
     include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-entity:${project.cardinal_version}"
+
+    modImplementation "com.github.apace100:apoli:${project.apoli_version}"
+    include "com.github.apace100:apoli:${project.apoli_version}"
 
 }
 

@@ -1,13 +1,14 @@
 package myrrhion.identityorigins.powers;
 
-import io.github.apace100.origins.power.Active;
-import io.github.apace100.origins.power.VariableIntPower;
-import io.github.apace100.origins.power.factory.PowerFactory;
-import io.github.apace100.origins.power.factory.condition.ConditionFactory;
-import io.github.apace100.origins.registry.ModRegistries;
-import io.github.apace100.origins.util.HudRender;
-import io.github.apace100.origins.util.SerializableData;
-import io.github.apace100.origins.util.SerializableDataType;
+import io.github.apace100.apoli.data.ApoliDataTypes;
+import io.github.apace100.apoli.power.Active;
+import io.github.apace100.apoli.power.VariableIntPower;
+import io.github.apace100.apoli.power.factory.PowerFactory;
+import io.github.apace100.apoli.power.factory.condition.ConditionFactory;
+import io.github.apace100.apoli.registry.ApoliRegistries;
+import io.github.apace100.apoli.util.HudRender;
+import io.github.apace100.calio.data.SerializableData;
+import io.github.apace100.calio.data.SerializableDataTypes;
 import myrrhion.identityorigins.IdentityOrigins;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -27,10 +28,10 @@ public class IdentityPowerFactory {
     public static void register() {
         register(new PowerFactory<>(IdentityOrigins.identifier("transform"),
                 new SerializableData()
-                        .add("cooldown", SerializableDataType.INT)
-                        .add("key", SerializableDataType.BACKWARDS_COMPATIBLE_KEY, new Active.Key())
-                        .add("entity_type", SerializableDataType.ENTITY_TYPE)
-                        .add("hud_render", SerializableDataType.HUD_RENDER)
+                        .add("cooldown", SerializableDataTypes.INT)
+                        .add("key", ApoliDataTypes.BACKWARDS_COMPATIBLE_KEY, new Active.Key())
+                        .add("entity_type", SerializableDataTypes.ENTITY_TYPE)
+                        .add("hud_render", ApoliDataTypes.HUD_RENDER)
                 ,
                 data -> (type,player) ->{
                     TransformPower power = new TransformPower(type,player,
@@ -45,9 +46,9 @@ public class IdentityPowerFactory {
                 .allowCondition());
         register(new PowerFactory<>(IdentityOrigins.identifier("edible"),
                 new SerializableData()
-                        .add("item_condition",SerializableDataType.ITEM_CONDITION)
-                        .add("hunger",SerializableDataType.INT,1)
-                        .add("saturation",SerializableDataType.FLOAT,0.5f)
+                        .add("item_condition",ApoliDataTypes.ITEM_CONDITION)
+                        .add("hunger",SerializableDataTypes.INT,1)
+                        .add("saturation",SerializableDataTypes.FLOAT,0.5f)
                 ,
                 data -> (type,player) ->{
                     return new EdiblePower(type,
@@ -61,6 +62,6 @@ public class IdentityPowerFactory {
          }
 
     private static void register(PowerFactory<?> factory) {
-        Registry.register(ModRegistries.POWER_FACTORY, factory.getSerializerId(), factory);
+        Registry.register(ApoliRegistries.POWER_FACTORY, factory.getSerializerId(), factory);
     }
 }

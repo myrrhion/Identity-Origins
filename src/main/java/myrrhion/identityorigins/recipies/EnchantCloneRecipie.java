@@ -6,7 +6,6 @@ import net.minecraft.inventory.CraftingInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.WrittenBookItem;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.SpecialCraftingRecipe;
 import net.minecraft.util.Identifier;
@@ -70,9 +69,6 @@ public class EnchantCloneRecipie extends SpecialCraftingRecipe {
 
         if (!itemStack.isEmpty() && itemStack.hasTag() && i >= 1 && WrittenBookItem.getGeneration(itemStack) < 2) {
             ItemStack itemStack3 = new ItemStack(Items.WRITTEN_BOOK, i);
-            CompoundTag compoundTag = itemStack.getTag().copy();
-            compoundTag.putInt("generation", WrittenBookItem.getGeneration(itemStack) + 1);
-            itemStack3.setTag(compoundTag);
             return itemStack3;
         } else {
             return ItemStack.EMPTY;
